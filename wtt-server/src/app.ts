@@ -1,15 +1,18 @@
 import express from "express";
 import { version } from "../package.json";
+import cors from "cors";
 
 const app = express();
 const port = 5000;
+
+app.use(cors());
 
 app.get("/", (req, res) => {
   res.send("Hello, WTT!");
 });
 
-app.get("/version", (_, res) => {
-  res.send(`Server version: ${version}`);
+app.get("/api/version", (_, res) => {
+  res.send({ version });
 });
 
 app.listen(port, () => {

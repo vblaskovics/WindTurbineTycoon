@@ -17,7 +17,6 @@ import { ServerService } from '../../services/server.service';
   `,
   styles: [`
     nav {
-      // background-color: var(--pico-color-purple-700);
       height: 80px;
     }
     .container {

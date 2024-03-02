@@ -11,7 +11,12 @@ import { AsyncPipe } from '@angular/common'
       <span class="">Server version: {{ serverVersion$ | async }}</span>
     </div>
   </div> `,
-  styles: [``],
+  styles: [`
+    .container {
+      display: flex;
+      justify-content: flex-end;
+    }
+  `],
 })
 export class FooterComponent {
   serverVersion$ = inject(ServerService).getVersion()
