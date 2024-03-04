@@ -6,10 +6,12 @@ COPY wtt-server/package*.json .
 
 RUN npm install
 
-COPY wtt-server/dist .
+COPY wtt-server/dist ./dist
 
-COPY wtt-app/dist/wtt-app/ ./public
+COPY wtt-app/dist/wtt-app/browser ./dist/public
 
 EXPOSE 5000
+
+WORKDIR /app/dist
 
 CMD ["node", "app.js"]

@@ -8,7 +8,7 @@
     "start": "concurrently \"npm run start:app\" \"npm run start:server\"",
     "build:app": "cd wtt-app && npm run build",
     "build:server": "cd wtt-server && npm run build",
-    "build": "npm run build:app && npm run build:server && docker build -t wtt"
+    "build": "npm run build:app && npm run build:server && docker build . -t wtt"
   },
   "author": "",
   "license": "ISC",
